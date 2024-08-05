@@ -7,4 +7,5 @@ pub mod gigasecond {
         const DURATION: time::Duration = Duration::new(1000000000, 0);
         start.add(DURATION)
     }
+    println!("{input}!");
 }
