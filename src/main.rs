@@ -1,9 +1,12 @@
-use gigasecond::after;
-use rust_exercism::gigasecond;
-use time::PrimitiveDateTime;
-use time_macros::date;
-use time_macros::time;
+use time::{Date, Month, PrimitiveDateTime, Time};
+
+mod gigasecond;
+mod reverse_string;
+
 fn main() {
-    let dt = PrimitiveDateTime::new(date!(2015 - 01 - 24), time!(22:00));
-    print!("{}", after(dt))
+    let dt = PrimitiveDateTime::new(
+        Date::from_calendar_date(2015, Month::January, 24).unwrap(),
+        Time::from_hms(22, 0, 0).unwrap(),
+    );
+    println!("{}", gigasecond::after(dt))
 }
