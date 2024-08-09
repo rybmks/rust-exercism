@@ -1,3 +1,4 @@
-pub fn pr(input: &str) {
-    println!("{input}!");
-}
+mod anagram;
+mod clock;
+mod gigasecond;
+mod reverse_string;
