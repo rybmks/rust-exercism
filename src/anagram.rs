@@ -1,8 +1,7 @@
 use std::collections::{HashMap, HashSet};
 
-#[allow(dead_code)]
-pub fn anagrams_for<'a>(word: &str, possible_anagrams: &'a [&str]) -> HashSet<&'a str> {
-    let mut result: HashSet<&'a str> = HashSet::new();
+pub fn anagrams_for<'a>(word: &'a str, possible_anagrams: &'a [&str]) -> HashSet<&'a str> {
+    let mut result: HashSet<&str> = HashSet::new();
     for anagram in possible_anagrams {
         let anagram_lower = anagram.to_lowercase();
         let word_lower = word.to_lowercase();
