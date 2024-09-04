@@ -6,7 +6,6 @@ pub struct Clock {
 }
 
 impl Clock {
-    #[allow(dead_code)]
     pub fn new(hours: i32, minutes: i32) -> Self {
         let mut m = minutes % 60;
         let mut h = 0;
@@ -28,7 +27,6 @@ impl Clock {
             minutes: m,
         }
     }
-    #[allow(dead_code)]
     pub fn add_minutes(&self, minutes: i32) -> Self {
         if minutes == 0 {
             return Self {

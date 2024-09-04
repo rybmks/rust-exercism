@@ -1,3 +1,5 @@
-mod clock;
-mod gigasecond;
-mod reverse_string;
+pub mod anagram;
+pub mod clock;
+pub mod gigasecond;
+pub mod reverse_string;
+pub mod space_age;
